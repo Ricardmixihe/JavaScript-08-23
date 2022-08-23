@@ -7,9 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-
+<style>
+    table{
+        border: 1px solid blue;
+    }
+</style>
 <body>
-
 
     <script>
         //前提：当数据类型导致计算结果有误，才需要进行数据转换
@@ -89,14 +92,49 @@
         // b)使用模板字符串拼接(掌握)
         //什么是模板字符串？
         // let a = `呵呵呵`;
-        //模板字符串是不是字符串？是字串
+        //模板字符串是不是字符串？是字符串
         //console.log(typeof a);
-        //模板字符串如何实现拼接字符串？
-        //1语法：字符串${变量}
 
-        let uname = '老段'
-        let age = 23
-        document.write(`名字：${uname} 年龄：${age}`)
+
+        //模板字符串如何实现拼接字符串？
+        //1语法：`字符串${变量}`
+
+        // let uname = '老段'
+        // let age = 23
+        // document.write(`名字：${uname} 年龄：${age}`)
+
+        //商品名称
+        let    name = prompt('请输入商品名称');
+        //商品价格 
+        let prise = prompt('请输入价格');
+        //商品数量
+        let num = prompt('请输入数量');
+        //收货地址
+        let address = prompt('请输入收货地址');
+
+        let total = prise * num;
+
+        document.write(`
+            <table>
+                <tr>
+                        <th>名称</th>
+                        <th>价格</th>
+                        <th>数量</th>
+                        <th>总价</th>
+                        <th>收货地址</th>
+                </tr>
+                <tr>
+                        <td>${name}</td>
+                        <td>${prise}</td>
+                        <td>${num}</td>
+                        <td>${total}</td>
+                        <td>${address}</td>
+                    </tr>
+            </table>
+        `)
+
+
+
     </script>
 
 </body>
