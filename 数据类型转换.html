@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        //前提：当数据类型导致计算结果有误，才需要进行数据转换
+
+        //数据类型转换分类
+        // a)隐式类型转换（了解）
+        // 特点：在计算的过程中，数据类型发生了改变
+        // 结论：数学计算中，减法，乘法，除法，会发生隐形数据转换
+        // 加法默认不会直接进行隐式类型转换，需要写到特殊的位置
+        // let a = '1'
+        // let b = '1'
+        // console.log(a - b); //0
+        // b)显示类型转换（强制类型转换）【掌握】
+        // 1.转换数字类型
+        // Number(a)
+        // parseInt(a) 
+        // parseInt(a)
+
+        // let a = '1'
+            // a = Number(a)
+            // a = parseInt(a)
+            // a = parseInt(a)
+        // console.log(a+1);
+
+
+        // 2)转数字类型三种方式的区别
+        //相同点：都可以转化为数字类型
+        //不同点：数据类型转换后得到的结果不一样
+        // a）如果遇到的是一个字符串的小数，则parseInt转换数据类型后，最后的结果只保留整数部分，小数部分直接忽略
+        // b）如果遇到的是一个字符串的小数，则Number()或者parseFloat()数据类型转换后，值还是原来的小数。
+        // c）如果遇到的是一个非数字的字符串则Number（）转换后的结果是NaN（Not a Number)
+        // d)如果遇到的是一个非数字的字符串，parseFloat()会保留转换成功的数字
+
+
+
+
+
+        //js提供了两种转字符串的方式
+        // a） String（变量）
+        // b） 变量.toString（）
+
+        // let a  = 4;
+        // let b  = 5;
+        //     b  = b.toString();
+        //     console.log(a+b);
+
+
+
+        //转字符串类型方式区别：
+        // a）获取变量的数据类型： typeof(变量)
+        // b)第一种String()方式叫构造函数实现的类型转换
+        // c)第二中变量.tostring()方式叫方法实现的数据类型转换
+        // d)第一种构造函数方式，可以将任何一种数据类型，转换为字符串类型
+        // e第二种方式，不能将undefind类型转换为字符串类型
+
+
+
+
+        // let num1 = Number(prompt('请输入要计算的值'))
+        // let num2 = Number(prompt('请输入第二个值'))
+        // console.log(num1 + num2);
+
+
+        // let num1 = Number(prompt('请输入要计算的值'))
+        // let num2 = Number(prompt('请输入第二个值'))
+        // console.log(num1 - num2);
+
+
+
+        //拼接字符串：将字符串拼接显示到一块
+        // a)使用加号拼接字符串(了解)
+        // 语法：字符串+其他内容+其他内容
+
+        // let age = 23;
+        // let uname='老段';
+        // document.write('姓名:'+uname+'&nbsp;&nbsp;&nbsp;&nbsp;'+'年龄：'+age);
+        // b)使用模板字符串拼接(掌握)
+        //什么是模板字符串？
+        // let a = `呵呵呵`;
+        //模板字符串是不是字符串？是字串
+        //console.log(typeof a);
+        //模板字符串如何实现拼接字符串？
+        //1语法：字符串${变量}
+
+        let uname = '老段'
+        let age = 23
+        document.write(`名字：${uname} 年龄：${age}`)
+    </script>
+
+</body>
+
+</html>
