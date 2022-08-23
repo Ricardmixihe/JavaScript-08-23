@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+
+        // 1,先获取用户输入的两个数字
+        let num1 = Number(prompt('请输入第一个数字'))
+        let num2 = Number(prompt('请输入第二个数字'))
+        // /2.获取用户输入的运算符
+        let type=prompt('请输入运算符号')
+        switch(type){
+            case '+':
+                let sum = num1 +num2;
+                alert(`球和运算最后的结果是${sum}`)
+                break;
+                case '-':
+                    let num = num1 - num2;
+                    alert(`减法运算最后的结果是：${num}`)
+                    break;
+                case "*":
+                    let sum1 = num1 * num2;
+                    alert(`惩罚运算的结果是${sum1}`);
+                    break;
+                default:
+                    let sum2 = num1 /num2;
+                    alert(`出发元算结果是${sum2}`);
+                    break;
+        }
+    </script>
+
+</body>
+</html>
